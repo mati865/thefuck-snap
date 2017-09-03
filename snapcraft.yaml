@@ -1,0 +1,20 @@
+name: mati865-thefuck
+version: '3.23'
+summary: Magnificent app which corrects your previous console command.
+description: |
+  The Fuck tries to match a rule for the previous command,
+  creates a new command using the matched rule and runs it.
+
+grade: stable
+confinement: strict
+
+apps:
+  mati865-thefuck:
+    command: bin/thefuck
+  fuck:
+    command: bin/fuck
+
+parts:
+  thefuck:
+    source: https://github.com/nvbn/thefuck/archive/3.23.tar.gz
+    plugin: python
