@@ -10,9 +10,9 @@ confinement: strict
 
 apps:
   mati865-thefuck:
-    command: bin/thefuck
+    command: env PYTHONIOENCODING=utf-8 thefuck
   fuck:
-    command: bin/fuck
+    command: env PYTHONIOENCODING=utf-8 fuck
 
 parts:
   thefuck:
