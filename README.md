@@ -1,4 +1,4 @@
-# mati865-thefuck snap package
+# mati865-thefuck snap package [![Snap Status](https://build.snapcraft.io/badge/mati865/mati865-thefuck-snap.svg)](https://build.snapcraft.io/user/mati865/mati865-thefuck-snap)
 To use it make sure snap is installed:
 ```
 snap --version
