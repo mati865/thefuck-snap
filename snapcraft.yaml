@@ -1,20 +1,29 @@
 name: mati865-thefuck
-version: '3.23'
+version: stable
+version-script: git -C parts/thefuck/build describe --abbrev=0 --tags
 summary: Magnificent app which corrects your previous console command.
 description: |
   The Fuck tries to match a rule for the previous command,
   creates a new command using the matched rule and runs it.
 
+  Before using run:
+  sudo snap alias mati865-thefuck thefuck
+  sudo snap alias mati865-thefuck.fuck fuck
+
 grade: stable
-confinement: strict
+confinement: classic
 
 apps:
   mati865-thefuck:
-    command: env PYTHONIOENCODING=utf-8 thefuck
+    command: bin/thefuck
+    environment:
+        PYTHONIOENCODING: utf-8
   fuck:
-    command: env PYTHONIOENCODING=utf-8 fuck
+    command: bin/fuck
+    environment:
+        PYTHONIOENCODING: utf-8
 
 parts:
   thefuck:
-    source: https://github.com/nvbn/thefuck/archive/3.23.tar.gz
+    source: https://github.com/nvbn/thefuck.git
     plugin: python
