@@ -11,7 +11,7 @@ description: |
   sudo snap alias mati865-thefuck.fuck fuck
 
 grade: stable
-confinement: strict
+confinement: classic
 
 apps:
   mati865-thefuck:
