@@ -27,3 +27,4 @@ parts:
   thefuck:
     source: https://github.com/nvbn/thefuck.git
     plugin: python
+
